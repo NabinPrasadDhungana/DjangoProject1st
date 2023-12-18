@@ -18,9 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from mysite import views
 
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('',views.homePage),
+#     path('interests/',views.interests),
+#     path('contacts/',views.contacts)
+# ]
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.homePage),
-    path('interests/',views.interests),
-    path('contacts/',views.contacts)
+    path('',views.homePage, name='home_page'),
+    path('interests/',views.interests, name='interest_page'),
+    path('contacts/',views.contacts, name='contact_page')
 ]
+

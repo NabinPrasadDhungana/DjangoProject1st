@@ -20,11 +20,18 @@
         </style>
     </head>
     <body>
-        <header>
+        {% comment %} <header>
             <a href="index.html">Home</a>
             <a href="static/gallery.html">Gallery</a>
             <a href="interest.html">Interests</a> 
             <a href="contacts.html"> Contacts</a> 
+        </header> {% endcomment %}
+
+        <header>
+            <a href="{% url 'home_page' %}">Home</a>
+            <a href="static/gallery.html">Gallery</a>
+            <a href="{% url 'interest_page' %}">Interests</a> 
+            <a href="{% url 'contact_page' %}"> Contacts</a> 
         </header>
         
         <h1> Home</h1>
