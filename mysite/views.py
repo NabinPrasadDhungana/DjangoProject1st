@@ -10,3 +10,6 @@ def interests(request):
 
 def contacts(request):
     return render(request,"contacts.html")
+
+def gallery(request):
+    return render(request,"gallery.html")
