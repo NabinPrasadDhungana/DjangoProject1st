@@ -1,41 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Contacts</title>
-        <style>
-            header{
-                margin: 10px ; 
-                font-size: 1.5rem;
-                font: 1em sans-serif;
-            }
-              h1{
-                padding: 10px;
-            background-color: yellowgreen;
-            color: white;
-            text-align: center;
-        }
-        h2{
-                color: blueviolet;
-        }
-        </style>
-    </head>
-    <body>
-       {% comment %} <header>
-        <a href="index.html">Home</a>
-        <a href="static/gallery.html">Gallery</a>
-        <a href="interest.html">Interests</a> 
-        <a href="contacts.html"> Contacts</a> 
-    </header> {% endcomment %}
 
-    <header>
-        <a href="{% url 'home_page' %}">Home</a>
-        <a href="static/gallery.html">Gallery</a>
-        <a href="{% url 'interest_page' %}">Interests</a> 
-        <a href="{% url 'contact_page' %}"> Contacts</a> 
-    </header>
+      
+    {% include 'header.html'%}
     
         <h1>Contacts</h1> 
-        <h2>My contacts</h2>
+        <h3>My contacts</h3>
         <p>Anyone can contact me by mailing or messaging or
         calling me on the following addresses/numbers.</p>
         <p>Ph. no.: 9863483039, 9863593864, 9841121402, 9843051078</p>
@@ -48,5 +16,4 @@
         </p>
         <p>Facebook/Messenger: Nabin Prasad Dhungana</p>
         <p>Thank you !</p>
-    </body>
-</html>
+        {% include 'footer.html' %}

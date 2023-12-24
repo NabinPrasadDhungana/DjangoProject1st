@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Interests</title>
-        <style>
-            header{
-                margin: 10px ; 
-                font-size: 1.5rem;
-                font: 1em sans-serif;
-            }
-            h1{
-                padding: 10px;
-          background-color: yellowgreen;
-          color: white;
-          text-align: center;
-      }
-      ul{
-        font-size: 1.5rem;
-      }
-      </style>
-    </head>
-    <body>
-       {% comment %} <header>
-        <a href="index.html">Home</a>
-        <a href="static/gallery.html">Gallery</a>
-        <a href="interest.html">Interests</a> 
-        <a href="contacts.html"> Contacts</a> 
-    </header> {% endcomment %}
 
-    <header>
-        <a href="{% url 'home_page' %}">Home</a>
-        <a href="static/gallery.html">Gallery</a>
-        <a href="{% url 'interest_page' %}">Interests</a> 
-        <a href="{% url 'contact_page' %}"> Contacts</a> 
-    </header>
+    {% include 'header.html'%}
     
-    <h1>Interests</h1>
+    <h3>Interests</h3>
     <ul>
         <li>Coding</li>
         <li>Playing Games</li>
@@ -42,5 +9,5 @@
         <li>Doing hardwork</li>
         <li>Enjoying with friends</li>
     </ul>
-    </body>
-</html>
+
+    {% include 'footer.html'%}

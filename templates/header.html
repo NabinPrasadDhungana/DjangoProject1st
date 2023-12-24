@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> {{title}}</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+<header>
+    <a class="{% if request.path == '/' %} active {% endif %}" href="{% url 'home_page' %}">Home</a>
+    <a class="{% if request.path == '/gallery/' %} active {% endif %}" href="{% url 'gallery_page'%}">Gallery</a>
+    <a class="{% if request.path == '/interests/' %} active {% endif %}" href="{% url 'interest_page' %}">Interests</a> 
+    <a class="{% if request.path == '/contacts/' %} active {% endif %}" href="{% url 'contact_page' %}"> Contacts</a> 
+</header>
