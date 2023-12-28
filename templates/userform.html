@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+<div class="user-form">
+    <h1 class="mb-10">User Form</h1>
+<form method="post" action="{% url "submitform" %}">
+    {% csrf_token %}
+    {{form}}
+    {% comment %} <div class="object first pt-2">
+        <label>Value1</label>
+        <input type="text" value="{{n1}}" class="txtbox form-control" id="val1" name="num1">
+    </div>
+
+    <div class="object second pt-2">
+        <label>Value2</label>
+        <input type="text" value="{{n2}}" class="txtbox form-control" id="val2" name="num2">
+    </div>
+    <div class="object second pt-2">
+        <label>Output</label>
+        <input type="text" readonly class="txtbox form-control" value="{{output}}">
+    </div> {% endcomment %}
+    <div class="mt-3">
+        <button class="submit" name="save">Save</button>
+    </div>
+
+</form>
+</div>
+
+{% include 'footer.html'%}

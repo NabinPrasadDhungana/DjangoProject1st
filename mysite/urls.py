@@ -31,5 +31,8 @@ urlpatterns = [
     path('',views.homePage, name='home_page'),
     path('interests/',views.interests, name='interest_page'),
     path('contacts/',views.contacts, name='contact_page'),
-    path('gallery/',views.gallery,name='gallery_page')
+    path('gallery/',views.gallery,name='gallery_page'),
+    path('user-form/',views.userform,name='userform_page'),
+    path('submitform/thank-you/',views.thankyou,name='thankyou_page'),
+    path('submitform/',views.submitform, name="submitform")
 ]

@@ -8,12 +8,12 @@ header{
     font-size: 1.5rem;
     font: 1em sans-serif;
 }
-header a{
+header .active a {
+    background-color: red;
     padding: 10px;
 }
-header .active a{
-    background-color: red;
-}
+/* header .active a{
+} */
 /*About Myself*/
 h1{
     padding: 10px;
