@@ -34,5 +34,6 @@ urlpatterns = [
     path('gallery/',views.gallery,name='gallery_page'),
     path('user-form/',views.userform,name='userform_page'),
     path('submitform/thank-you/',views.thankyou,name='thankyou_page'),
-    path('submitform/',views.submitform, name="submitform")
+    path('submitform/',views.submitform, name="submitform"),
+    path('calculator/',views.calculator, name="calculator")
 ]

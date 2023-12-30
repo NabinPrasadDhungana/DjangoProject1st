@@ -71,3 +71,35 @@ def submitform(request):
     
 def thankyou(request):
     return render(request,'thankyou.html')
+
+def calculator(request):
+    data={}
+    try:
+        if request.method=='POST':
+            n1=request.POST.get('num1')
+            n2=request.POST.get('num2')
+            opr=request.POST.get('opr')
+            match opr:
+                case '+':
+                    result=int(n1)+int(n2)
+                    
+                case '-':
+                    result=int(n1)-int(n2)
+
+                case '*':
+                    result=int(n1)*int(n2)
+
+                case '/':
+                    try:
+                        result=float(n1)/float(n2)
+
+                    except:
+                        result='Error! Division by zero is not allowed.'
+
+            data={'num1': n1,
+                'num2':n2,
+                  'result':result
+                  }
+    except:
+        pass
+    return render(request,"calculator.html",data)

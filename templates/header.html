@@ -9,10 +9,17 @@
     </head>
     <body>
 <header>
-    {% url '/' as urls%}
+    {% comment %} {% url '/' as urls%}
     <a class="{% if request.path == urls %} active {% endif %}" href="{% url 'home_page' %}">Home</a>
     <a class="{% if request.path == '/gallery/' %} active {% endif %}" href="{% url 'gallery_page'%}">Gallery</a>
     <a class="{% if request.path == '/interests/' %} active {% endif %}" href="{% url 'interest_page' %}">Interests</a> 
     <a class="{% if request.path == '/contacts/' %} active {% endif %}" href="{% url 'contact_page' %}"> Contacts</a> 
-    <a class="{% if request.path == '/user-form/' %} active {% endif %}" href="{% url 'userform_page' %}"> Form</a> 
+    <a class="{% if request.path == '/user-form/' %} active {% endif %}" href="{% url 'userform_page' %}"> Form</a>  {% endcomment %}
+
+    <a href="{% url 'home_page' %}">Home</a>
+    <a href="{% url 'gallery_page'%}">Gallery</a>
+    <a href="{% url 'interest_page' %}">Interests</a> 
+    <a href="{% url 'contact_page' %}"> Contacts</a> 
+    <a href="{% url 'userform_page' %}"> Form</a>
+    <a href="{% url 'calculator'%}">Calculator</a>
 </header>

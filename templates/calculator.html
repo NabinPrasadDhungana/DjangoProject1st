@@ -1,0 +1,30 @@
+{% include 'header.html' %}
+
+<h1>Calculator</h1>
+
+<div>
+    <form method="post" >
+        {% csrf_token %}
+        <label>Value 1</label>
+        <input type="text" class="form-control mb-3" value="{{num1}}" name="num1">
+        <label>Value 2</label>
+        <input type="text" class="form-control mb-3" value="{{num2}}" name="num2">
+        <label>Operator..</label>
+        <select class="form-control mb-3" name="opr">
+            <option value="+">Plus (+)</option>
+            <option value="-">Minus (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+        </select>
+        <label>Result</label>
+        <input type="text" readonly class=" form-control mb-3" value="{{result}}" name="result">
+        <div class="text-center">
+            <button type="submit" class="p-3 mb-3 border-1 bg-gradient
+            bg-primary rounded-pill">Calculate at one click</button>
+        </div>
+    </form>
+
+</div>
+
+
+{% include 'footer.html' %}
