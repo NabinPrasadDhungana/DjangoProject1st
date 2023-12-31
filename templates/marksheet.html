@@ -1,0 +1,48 @@
+{% include 'header.html' %}
+
+<h1 class="mt-3">Marksheet</h1>
+<form method="post">
+    {% csrf_token %}
+
+    <label class="mt-3">Mathematics</label>
+    <input class="form-control" value="{{mark1}}" name="mark1" type="number">
+
+    <label class="mt-3">Science</label>
+    <input class="form-control" value="{{mark2}}" name="mark2" type="number">
+
+    <label class="mt-3">Social</label>
+    <input class="form-control" value="{{mark3}}" name="mark3" type="number">
+
+    <label class="mt-3">English</label>
+    <input class="form-control" value="{{mark4}}" name="mark4" type="number">
+
+    <label class="mt-3">Nepali</label>
+    <input class="form-control" value="{{mark5}}" name="mark5" type="number">
+
+    <label class="mt-3">Health</label>
+    <input class="form-control" value="{{mark6}}" name="mark6" type="number">
+
+    <div class="text-center mt-4">
+        <button type="submit">Calculate marks</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <label class="mt-3">Total</label>
+    <input class="form-control" value="{{total}}" name="total" readonly type="number">
+
+    <label class="mt-3">Percentage</label>
+    <input class="form-control" value="{{percent}}" name="percent" readonly type="text">
+
+    <label class="mt-3">Division</label>
+    <input class="form-control" value="{{division}}" name="division" readonly type="text">
+
+    <label class="mt-3">Result</label>
+    <input class="form-control" value="{{result}}" name="result" readonly type="text">
+
+    <label class="mt-3">Remarks</label>
+    <input class="form-control" value="{{remarks}}" name="remarks" readonly type="text">
+
+</form>
+{% include 'footer.html' %}

@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+    <h1>EVEN OR ODD ?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label class="mt-3">Value</label>
+        <input class="form-control" value="{{number}}" name="num" type="text">
+
+        <label class="mt-3">Result</label>
+        <input class="form-control" value="{{result}}" name="result" readonly type="text">
+
+        <div class="text-center mt-4">
+            <button type="submit">Even | Odd</button>
+        </div>
+    
+    </form>
+
+{% include 'footer.html' %}
